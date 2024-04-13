@@ -48,4 +48,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+-- Netrw remap
+vim.keymap.set('n', '<leader>mn', vim.cmd.Ex, { desc = 'Show [N]etrw directory listing' })
+
 -- vim: ts=2 sts=2 sw=2 et
