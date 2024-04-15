@@ -51,4 +51,16 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 -- Netrw remap
 vim.keymap.set('n', '<leader>mn', vim.cmd.Ex, { desc = 'Show [N]etrw directory listing' })
 
+-- other remaps
+vim.keymap.set('n', 'J', 'mzJ`z', { desc = 'Move the next line to the end of this line' })
+
+vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Jump [D]own half a page' })
+vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Jump [U]p half a page' })
+
+vim.keymap.set('n', 'n', 'nzzzv', { desc = 'Search [n]ext keeping the search term centered' })
+vim.keymap.set('n', 'N', 'Nzzzv', { desc = 'Search [N]previous keeping the search term centered' })
+
+vim.keymap.set('x', '<leader>p', "'_dP", { desc = '[P]aste keeping the value in register' })
+
+vim.keymap.set('n', '<leader>Y', "'+Y", { desc = '[Y]ank selection to system clipboard' })
 -- vim: ts=2 sts=2 sw=2 et

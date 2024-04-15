@@ -20,17 +20,6 @@ vim.opt.showmode = false
 --  See `:help 'clipboard'`
 vim.opt.clipboard = 'unnamedplus'
 
--- setup the g:clipboard
-local in_wsl = os.getenv 'WSL_DISTRO_NAME'
-if in_wsl then
-  vim.g.clipboard = {
-    name = 'wsl clipboard',
-    copy = { ['+'] = { 'clip.exe' }, ['*'] = { 'clip.exe' } },
-    paste = { ['+'] = { 'nvim_paste' }, ['*'] = { 'nvim_paste' } },
-    cache_enabled = true,
-  }
-end
-
 -- Enable break indent
 vim.opt.breakindent = true
 
