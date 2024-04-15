@@ -60,7 +60,6 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Jump [U]p half a page' })
 vim.keymap.set('n', 'n', 'nzzzv', { desc = 'Search [n]ext keeping the search term centered' })
 vim.keymap.set('n', 'N', 'Nzzzv', { desc = 'Search [N]previous keeping the search term centered' })
 
-vim.keymap.set('x', '<leader>p', "'_dP", { desc = '[P]aste keeping the value in register' })
-
 vim.keymap.set('n', '<leader>Y', "'+Y", { desc = '[Y]ank selection to system clipboard' })
 -- vim: ts=2 sts=2 sw=2 et
+--
