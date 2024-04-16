@@ -61,5 +61,14 @@ vim.keymap.set('n', 'n', 'nzzzv', { desc = 'Search [n]ext keeping the search ter
 vim.keymap.set('n', 'N', 'Nzzzv', { desc = 'Search [N]previous keeping the search term centered' })
 
 vim.keymap.set('n', '<leader>Y', "'+Y", { desc = '[Y]ank selection to system clipboard' })
+
+-- Move selection up and down
+vim.keymap.set('v', '<C-down>', ":m '>+1<CR>gv=gv")
+vim.keymap.set('v', '<C-up>', ":m '<-2<CR>gv=gv")
+vim.keymap.set('n', '<C-down>', ':m .+1<CR>==')
+vim.keymap.set('n', '<C-up>', ':m .-2<CR>==')
+
+-- setup Ctrl-s to save current file
+vim.keymap.set('n', '<C-s>', vim.cmd.update)
+vim.keymap.set('i', '<C-s>', vim.cmd.update)
 -- vim: ts=2 sts=2 sw=2 et
---
